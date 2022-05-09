@@ -14,7 +14,20 @@ class BluetoothManager: NSObject {
     private var tx: CBCharacteristic?
     private var rx: CBCharacteristic?
     
-    private var counter = 0
+    private let source = CGEventSource(stateID: CGEventSourceStateID.hidSystemState)
+    private let upKey: UInt16 = 126
+    private let downKey: UInt16 = 125
+    private var upKeyPress: CGEvent?
+    private var upKeyUnpress: CGEvent?
+    private var downKeyPress: CGEvent?
+    private var downKeyUnpress: CGEvent?
+    
+    override init() {
+        self.upKeyPress = CGEvent(keyboardEventSource: source, virtualKey: upKey, keyDown: true)
+        self.upKeyUnpress = CGEvent(keyboardEventSource: source, virtualKey: upKey, keyDown: false)
+        self.downKeyPress = CGEvent(keyboardEventSource: source, virtualKey: downKey, keyDown: true)
+        self.downKeyUnpress = CGEvent(keyboardEventSource: source, virtualKey: downKey, keyDown: false)
+    }
     
     func scan() {
         centralManager = CBCentralManager(delegate: self, queue: nil)
@@ -156,20 +169,29 @@ extension BluetoothManager: CBPeripheralDelegate {
         }
         
         if(midiData.message == MidiMessage.ControlChange) {
+            let loc = CGEventTapLocation.cghidEventTap
+
+            upKeyPress?.flags = CGEventFlags.maskCommand
+            upKeyUnpress?.flags = CGEventFlags.maskCommand
+            downKeyPress?.flags = CGEventFlags.maskCommand
+            downKeyUnpress?.flags = CGEventFlags.maskCommand
+            
             let key = midiData.data[0] & 0x7F
             
             if(key == WHEEL) {
                 let value: UInt8 = midiData.data[1] & 0x7F
                 switch(value) {
                 case clockwise:
-                    counter = counter + 1
+                    upKeyPress?.post(tap: loc)
+                    upKeyUnpress?.post(tap: loc)
+                    print("Up Key Pressed")
                 case counterClockwise:
-                    counter = counter - 1
+                    downKeyPress?.post(tap: loc)
+                    downKeyUnpress?.post(tap: loc)
+                    print("Down Key Pressed")
                 default:
                     break
                 }
-                
-                print("value: \(counter)")
             }
         }
     }
