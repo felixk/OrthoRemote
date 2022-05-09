@@ -1,0 +1,380 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC9FE04828230E430090F7C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9FE04728230E430090F7C5 /* AppDelegate.swift */; };
+		DC9FE04A28230E430090F7C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9FE04928230E430090F7C5 /* ViewController.swift */; };
+		DC9FE04C28230E450090F7C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC9FE04B28230E450090F7C5 /* Assets.xcassets */; };
+		DC9FE04F28230E450090F7C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC9FE04D28230E450090F7C5 /* Main.storyboard */; };
+		DC9FE0572823FE310090F7C5 /* Data+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9FE0562823FE310090F7C5 /* Data+Hex.swift */; };
+		DC9FE05A282404AD0090F7C5 /* MidiMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9FE059282404AD0090F7C5 /* MidiMessage.swift */; };
+		DC9FE05C282406C00090F7C5 /* MidiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9FE05B282406C00090F7C5 /* MidiData.swift */; };
+		DCC3AD2A28260CFC006AB0BB /* OrthoRemoteUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC3AD2928260CFB006AB0BB /* OrthoRemoteUUID.swift */; };
+		DCC3AD2C2826141A006AB0BB /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC3AD2B2826141A006AB0BB /* BluetoothManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DC9FE04428230E430090F7C5 /* OrthoRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrthoRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC9FE04728230E430090F7C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC9FE04928230E430090F7C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC9FE04B28230E450090F7C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC9FE04E28230E450090F7C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC9FE05028230E450090F7C5 /* OrthoRemote.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OrthoRemote.entitlements; sourceTree = "<group>"; };
+		DC9FE0562823FE310090F7C5 /* Data+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Hex.swift"; sourceTree = "<group>"; };
+		DC9FE059282404AD0090F7C5 /* MidiMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiMessage.swift; sourceTree = "<group>"; };
+		DC9FE05B282406C00090F7C5 /* MidiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiData.swift; sourceTree = "<group>"; };
+		DC9FE05D282426A60090F7C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DCC3AD2928260CFB006AB0BB /* OrthoRemoteUUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrthoRemoteUUID.swift; sourceTree = "<group>"; };
+		DCC3AD2B2826141A006AB0BB /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC9FE04128230E430090F7C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC9FE03B28230E430090F7C5 = {
+			isa = PBXGroup;
+			children = (
+				DC9FE04628230E430090F7C5 /* OrthoRemote */,
+				DC9FE04528230E430090F7C5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC9FE04528230E430090F7C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC9FE04428230E430090F7C5 /* OrthoRemote.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC9FE04628230E430090F7C5 /* OrthoRemote */ = {
+			isa = PBXGroup;
+			children = (
+				DC9FE05D282426A60090F7C5 /* Info.plist */,
+				DC9FE058282404A00090F7C5 /* MidiParser */,
+				DC9FE04728230E430090F7C5 /* AppDelegate.swift */,
+				DC9FE04928230E430090F7C5 /* ViewController.swift */,
+				DC9FE04B28230E450090F7C5 /* Assets.xcassets */,
+				DC9FE04D28230E450090F7C5 /* Main.storyboard */,
+				DC9FE05028230E450090F7C5 /* OrthoRemote.entitlements */,
+				DC9FE0562823FE310090F7C5 /* Data+Hex.swift */,
+				DCC3AD2928260CFB006AB0BB /* OrthoRemoteUUID.swift */,
+				DCC3AD2B2826141A006AB0BB /* BluetoothManager.swift */,
+			);
+			path = OrthoRemote;
+			sourceTree = "<group>";
+		};
+		DC9FE058282404A00090F7C5 /* MidiParser */ = {
+			isa = PBXGroup;
+			children = (
+				DC9FE059282404AD0090F7C5 /* MidiMessage.swift */,
+				DC9FE05B282406C00090F7C5 /* MidiData.swift */,
+			);
+			path = MidiParser;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC9FE04328230E430090F7C5 /* OrthoRemote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC9FE05328230E450090F7C5 /* Build configuration list for PBXNativeTarget "OrthoRemote" */;
+			buildPhases = (
+				DC9FE04028230E430090F7C5 /* Sources */,
+				DC9FE04128230E430090F7C5 /* Frameworks */,
+				DC9FE04228230E430090F7C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OrthoRemote;
+			productName = OrthoRemote;
+			productReference = DC9FE04428230E430090F7C5 /* OrthoRemote.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC9FE03C28230E430090F7C5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					DC9FE04328230E430090F7C5 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+				};
+			};
+			buildConfigurationList = DC9FE03F28230E430090F7C5 /* Build configuration list for PBXProject "OrthoRemote" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC9FE03B28230E430090F7C5;
+			productRefGroup = DC9FE04528230E430090F7C5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC9FE04328230E430090F7C5 /* OrthoRemote */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC9FE04228230E430090F7C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC9FE04C28230E450090F7C5 /* Assets.xcassets in Resources */,
+				DC9FE04F28230E450090F7C5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC9FE04028230E430090F7C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC9FE05A282404AD0090F7C5 /* MidiMessage.swift in Sources */,
+				DC9FE05C282406C00090F7C5 /* MidiData.swift in Sources */,
+				DC9FE0572823FE310090F7C5 /* Data+Hex.swift in Sources */,
+				DCC3AD2C2826141A006AB0BB /* BluetoothManager.swift in Sources */,
+				DCC3AD2A28260CFC006AB0BB /* OrthoRemoteUUID.swift in Sources */,
+				DC9FE04A28230E430090F7C5 /* ViewController.swift in Sources */,
+				DC9FE04828230E430090F7C5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DC9FE04D28230E450090F7C5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC9FE04E28230E450090F7C5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC9FE05128230E450090F7C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DC9FE05228230E450090F7C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		DC9FE05428230E450090F7C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = OrthoRemote/OrthoRemote.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XS3SZSZNJ7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OrthoRemote/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = Test;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobiledevgroup.OrthoRemote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		DC9FE05528230E450090F7C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = OrthoRemote/OrthoRemote.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XS3SZSZNJ7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OrthoRemote/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = Test;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobiledevgroup.OrthoRemote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC9FE03F28230E430090F7C5 /* Build configuration list for PBXProject "OrthoRemote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC9FE05128230E450090F7C5 /* Debug */,
+				DC9FE05228230E450090F7C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC9FE05328230E450090F7C5 /* Build configuration list for PBXNativeTarget "OrthoRemote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC9FE05428230E450090F7C5 /* Debug */,
+				DC9FE05528230E450090F7C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC9FE03C28230E430090F7C5 /* Project object */;
+}
