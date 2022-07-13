@@ -17,16 +17,21 @@ class BluetoothManager: NSObject {
     private let source = CGEventSource(stateID: CGEventSourceStateID.hidSystemState)
     private let upKey: UInt16 = 126
     private let downKey: UInt16 = 125
+    private let spaceKey: UInt16 = 0x31
     private var upKeyPress: CGEvent?
     private var upKeyUnpress: CGEvent?
     private var downKeyPress: CGEvent?
     private var downKeyUnpress: CGEvent?
+    private var spaceKeyPress: CGEvent?
+    private var spaceKeyUnpress: CGEvent?
     
     override init() {
         self.upKeyPress = CGEvent(keyboardEventSource: source, virtualKey: upKey, keyDown: true)
         self.upKeyUnpress = CGEvent(keyboardEventSource: source, virtualKey: upKey, keyDown: false)
         self.downKeyPress = CGEvent(keyboardEventSource: source, virtualKey: downKey, keyDown: true)
         self.downKeyUnpress = CGEvent(keyboardEventSource: source, virtualKey: downKey, keyDown: false)
+        self.spaceKeyPress = CGEvent(keyboardEventSource: source, virtualKey: spaceKey, keyDown: true)
+        self.spaceKeyUnpress = CGEvent(keyboardEventSource: source, virtualKey: spaceKey, keyDown: false)
     }
     
     func scan() {
@@ -152,11 +157,14 @@ extension BluetoothManager: CBPeripheralDelegate {
 
         guard let midiData = MidiData.parseMidiDataPacket(packetData: characteristicValue) else { return }
         
+        let loc = CGEventTapLocation.cghidEventTap
+        
         if(midiData.message == MidiMessage.NoteOn) {
             let key = midiData.data[0] & 0x7F
             
             if(key == BUTTON_KEY) {
                 print("button pressed")
+                spaceKeyPress?.post(tap: loc)
             }
         }
         
@@ -165,17 +173,11 @@ extension BluetoothManager: CBPeripheralDelegate {
             
             if(key == BUTTON_KEY) {
                 print("button unpressed")
+                spaceKeyUnpress?.post(tap: loc)
             }
         }
         
         if(midiData.message == MidiMessage.ControlChange) {
-            let loc = CGEventTapLocation.cghidEventTap
-
-            upKeyPress?.flags = CGEventFlags.maskCommand
-            upKeyUnpress?.flags = CGEventFlags.maskCommand
-            downKeyPress?.flags = CGEventFlags.maskCommand
-            downKeyUnpress?.flags = CGEventFlags.maskCommand
-            
             let key = midiData.data[0] & 0x7F
             
             if(key == WHEEL) {
